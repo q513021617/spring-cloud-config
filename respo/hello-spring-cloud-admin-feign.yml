@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: hello-spring-cloud-admin-feign
+
+server:
+  port: 8765
+
+feign:
+  hystrix:
+    enabled: true
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    servcieUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
