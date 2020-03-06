@@ -1,6 +1,6 @@
 spring:
   application:
-    name: hello-spring-cloud-eureka
+    name: solution-eureka
   zipkin:
     base-url: http://localhost:9411
   boot:
@@ -17,7 +17,7 @@ eureka:
     registerWithEureka: false
     fetchRegister: false
     servcieUrl:
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
 
 management:
   metrics:
@@ -26,4 +26,4 @@ management:
     endpoints:
       web:
         exposure:
-          include: ["health","info"]
+          include: health,info
